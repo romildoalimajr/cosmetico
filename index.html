@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COSMÉTICOS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" type="img/x-icon" href="./img/kalangos.ico">
+
+</head>
+
+<body>
+
+    <!--header section starts-->
+    <header class="header" id="header">
+
+        <a href="#home" class="logo"><img src="img/logo.png" alt=""></a>
+
+        <form action="" class="search-form">
+            <input type="search" name="" id="search-box" placeholder="procure aqui...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+        </div>
+
+    </header>
+    <!--header section ends-->
+
+    <!--navbar section starts-->
+    <nav class="navbar">
+        <div class="fas fa-times" id="close-navbar"></div>
+        <a href="#home">home</a>
+        <a href="#shop">shop</a>
+        <a href="#gallery">galeria</a>
+        <a href="#team">equipe</a>
+        <a href="#arrivals">arrivals</a>
+        <a href="#blogs">blogs</a>
+    </nav>
+    <!--navbar section ends-->
+
+    <!--home section starts-->
+    <section class="home" id="home">
+
+        <div class="slide active">
+            <div class="content">
+                <img src="img/content-img-1.png" alt="">
+                <span>nova coleção 2022</span>
+                <h3>cosméticos</h3>
+                <a href="#" class="btn">saiba mais</a>
+                <div class="controls">
+                    <div class="fas fa-angle-left" onclick="prev()"></div>
+                    <div class="fas fa-angle-right" onclick="next()"></div>
+                </div>
+            </div>
+            <div class="image">
+                <img src="img/home-img-1.png" alt="">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <img src="img/content-img-2.png" alt="">
+                <span>nova coleção 2022</span>
+                <h3>acessórios</h3>
+                <a href="#" class="btn">saiba mais</a>
+                <div class="controls">
+                    <div class="fas fa-angle-left" onclick="prev()"></div>
+                    <div class="fas fa-angle-right" onclick="next()"></div>
+                </div>
+            </div>
+            <div class="image">
+                <img src="img/home-img-2.png" alt="">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <img src="img/content-img-3.png" alt="">
+                <span>nova coleção</span>
+                <h3>maquiagens</h3>
+                <a href="#" class="btn">saiba mais</a>
+                <div class="controls">
+                    <div class="fas fa-angle-left" onclick="prev()"></div>
+                    <div class="fas fa-angle-right" onclick="next()"></div>
+                </div>
+            </div>
+            <div class="image">
+                <img src="img/home-img-3.png" alt="">
+            </div>
+        </div>
+
+    </section>
+    <!--home section ends-->
+
+    <!--category section starts-->
+    <section class="category" id="category">
+        <a href="#" class="box">
+            <img src="img/category-1.png" alt="">
+            <p>cosméticos</p>
+        </a>
+        <a href="#" class="box">
+            <img src="img/category-2.png" alt="">
+            <p>maquiagem</p>
+        </a>
+        <a href="#" class="box">
+            <img src="img/category-3.png" alt="">
+            <p>em pó</p>
+        </a>
+        <a href="#" class="box">
+            <img src="img/category-4.png" alt="">
+            <p>loções</p>
+        </a>
+        <a href="#" class="box">
+            <img src="img/category-5.png" alt="">
+            <p>batons</p>
+        </a>
+        <a href="#" class="box">
+            <img src="img/category-6.png" alt="">
+            <p>máscaras</p>
+        </a>
+    </section>
+    <!--category section ends-->
+
+    <!--about section starts-->
+    <section class="about" id="about">
+        <div class="content">
+            <span>por que nos escolher?</span>
+            <h3>maquiagem faz a diferença</h3>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Ducimus alias a quaerat excepturi dolor sapiente vero 
+                fugiat assumenda consequuntur error unde dolores minus 
+                praesentium, nostrum reprehenderit iste delectus numquam 
+                laborum velit odio tempore eveniet repellendus.
+            </p>
+            <a href="#" class="btn">saiba mais</a>
+        </div>
+    </section>
+    <!--about section ends-->
+
+    <!--shop section starts-->
+    <section class="shop" id="shop">
+        <div class="heading">
+            <h1>produtos em destaque</h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Magnam fugit rem quasi eos quas aut hic provident obcaecati 
+                necessitatibus aliquid.
+            </p>
+            <div class="products-slider"></div>
+        </div>
+    </section>
+    <!--shop section ends-->
+    <!--header section starts-->
+    <!--header section ends-->
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

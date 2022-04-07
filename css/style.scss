@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+$pink: #e84393;
+$black: #222;
+$white: #fff;
+$light-bg: #f5f5f5;
+$light-color: #777;
+$border: .2rem solid $black;
+$box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 2rem;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $pink;
+    }
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border: $border;
+    background: $white;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: $black;
+
+    &:hover {
+        color: $white;
+        background: $pink;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(4rem);
+        opacity: 0;
+    }
+}
+
+section {
+    padding: 5rem 9%;
+}
+
+.header {
+    padding: 1.5rem 9%;
+    background: $white;
+    box-shadow: $box-shadow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    .logo img {
+        height: 4rem;
+    }
+
+    .search-form {
+        height: 5rem;
+        width: 50rem;
+        border-radius: .5rem;
+        background: $light-bg;
+        display: flex;
+        align-items: center;
+        padding: 0 1.5rem;
+
+        input {
+            width: 100%;
+            background: none;
+            font-size: 1.6rem;
+            color: $light-color;
+            text-transform: none;
+        }
+
+        label {
+            font-size: 2rem;
+            margin-left: .7rem;
+            color: $black;
+            cursor: pointer;
+
+            &:hover {
+                color: $pink;
+            }
+        }
+    }
+
+    .icons a,
+    .icons div {
+        height: 4.5rem;
+        width: 4.5rem;
+        line-height: 4.5rem;
+        text-align: center;
+        background: $light-bg;
+        color: $black;
+        cursor: pointer;
+        font-size: 2rem;
+        margin-left: .3rem;
+        border-radius: .5rem;
+
+        &:hover {
+            background: $pink;
+            color: $white;
+        }
+    }
+
+    #search-btn {
+        display: none;
+    }
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: -110%;
+    z-index: 1010;
+    height: 100%;
+    width: 100%;
+    background: url(../img/navbar-bg.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-flow: column;
+    align-items: flex-end;
+    padding-right: 15%;
+
+    &.active {
+        left: 0;
+    }
+
+    #close-navbar {
+        position: absolute;
+        top: 3rem;
+        right: 2rem;
+        width: 5rem;
+        height: 5rem;
+        line-height: 5rem;
+        text-align: center;
+        background: $white;
+        border-radius: .5rem;
+        cursor: pointer;
+        color: $black;
+        font-size: 3rem;
+
+        &:hover {
+            color: $white;
+            background: $pink;
+        }
+    }
+
+    a {
+        font-size: 3rem;
+        color: $white;
+        font-weight: lighter;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $pink;
+            letter-spacing: .2rem;
+        }
+    }
+
+}
+
+.home {
+    padding: 0;
+
+    .slide {
+        display: none;
+        height: calc(100vh - 8rem);
+
+        &.active {
+            display: flex;
+        }
+
+        .content {
+            width: 50%;
+            padding: 2rem 7%;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: flex-start;
+            background: #fce9f2;
+            position: relative;
+
+            img {
+                height: 25rem;
+                width: 25rem;
+                margin-bottom: 2rem;
+                animation: fadeUp .2s linear backwards .2s;
+                display: none;
+            }
+
+            span {
+                color: $pink;
+                display: block;
+                font-size: 2rem;
+                padding-bottom: .5rem;
+                letter-spacing: .2rem;
+                text-transform: uppercase;
+                animation: fadeUp .2s linear backwards .4s;
+            }
+
+            h3 {
+                font-size: 5.5rem;
+                text-transform: uppercase;
+                color: $black;
+                animation: fadeUp .2s linear backwards .6s;
+            }
+
+            .btn {
+                animation: fadeUp .2s linear backwards .8s;
+            }
+
+            .controls {
+                position: absolute;
+                bottom: 12%;
+                right: -7rem;
+
+                div {
+                    height: 5rem;
+                    width: 5rem;
+                    line-height: 5rem;
+                    text-align: center;
+                    font-size: 3rem;
+                    background: $white;
+                    color: $black;
+                    margin: 0 1rem;
+                    box-shadow: $box-shadow;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: $pink;
+                        color: $white;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .image {
+            width: 50%;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.category{
+    @include grid(16rem);
+
+    .box{
+        padding: 2rem;
+        border-top: .5rem;
+        background: $light-bg;
+        text-align: center;
+
+        &:hover{
+            background: $black;
+
+            img{
+                filter: invert(1);
+            }
+            p{
+                color: $white;
+            }
+        }
+
+        img{
+            height: 10rem;
+            margin-bottom: 1rem;
+        }
+        p{
+            font-size: 1.7rem;
+            color: $black;
+        }
+    }
+}
+
+.about{
+    background: url(../img/about-bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+
+    .content{
+        width: 55rem;
+        background: $white;
+        padding: 3rem;
+
+        span{
+            color: $pink;
+            font-size: 2rem;
+        }
+        h3{
+            padding-top: 1rem;
+            font-size: 3rem;
+            color: $black;
+        }
+        p{
+            font-size: 1.5rem;
+            color: $light-color;
+            line-height: 2;
+            padding: 1rem 0;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    section {
+        padding: 3rem 5%;
+    }
+
+    .home .slide{
+        .content{
+            padding: 2rem;
+
+            span{
+                font-size: 2rem;
+            }
+            h3{
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header {
+        #search-btn {
+            display: inline-block;
+
+        }
+
+        .search-form {
+            position: absolute;
+            top: 99%;
+            left: 0;
+            border-top: $border;
+            border-bottom: $border;
+            width: 100%;
+            background: $white;
+            display: none;
+            height: 6rem;
+            animation: fadeUp .2s linear backwards;
+
+            &.active {
+                display: flex;
+            }
+        }
+    }
+    .home .slide{
+        position: relative;
+        height: calc(100vh - 6rem);
+
+        .content{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255,255,255,.7);
+            height: 100%;
+            align-items: center;
+
+            img{
+                display: inline-block;
+            }
+            .controls{
+                position: static;
+                margin-top: 7rem;
+
+                div{
+                    margin: 0 .5rem;
+                }
+            }
+        }
+        .image{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+}
