@@ -33,3 +33,27 @@ function prev() {
     index = (index - 1 + slides.length) % slides.length;
     slides[index].classList.add('active');
 }
+
+var swiper = new Swiper(".products-slider", {
+    loop: true,
+    grabeCursor: true,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints:{
+        0:{
+            slidesPerView: 1,
+        },
+        500:{
+            slidesPerView: 2,
+        },
+        768:{
+            slidesPerView: 3,
+        },
+        1024:{
+            slidesPerView: 4,
+        },
+    }
+  });
